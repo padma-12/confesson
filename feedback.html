@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback - Anonymous Confessions</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Anonymous Confessions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="confess.html">Submit Confession</a></li>
+                    <li><a href="feed.html">Confession Feed</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">User Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="feedback-section">
+        <div class="container">
+            <h1>User Feedback</h1>
+
+            <div class="report-content">
+                <h2>Report Inappropriate Content</h2>
+                <p>If you come across any confessions that are inappropriate, please report them below:</p>
+                <textarea id="reportInput" placeholder="Please describe the content and why you are reporting it..." rows="4"></textarea><br>
+                <button class="btn" onclick="submitReport()">Submit Report</button>
+            </div>
+
+            <div class="feedback-content">
+                <h2>Leave Your Feedback</h2>
+                <p>We value your suggestions and feedback! Please let us know how we can improve:</p>
+                <form id="feedbackForm">
+                    <textarea id="feedbackInput" placeholder="Your feedback or suggestion..." rows="4" required></textarea><br>
+                    <button type="submit" class="btn">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function submitReport() {
+            const reportInput = document.getElementById('reportInput').value;
+            if (reportInput) {
+                alert("Thank you for reporting. Your report has been submitted.");
+                document.getElementById('reportInput').value = "";
+            } else {
+                alert("Please enter a report description.");
+            }
+        }
+
+        document.getElementById('feedbackForm').onsubmit = function(event) {
+            event.preventDefault(); 
+            const feedbackInput = document.getElementById('feedbackInput').value;
+            if (feedbackInput) {
+                alert("Thank you for your feedback! It has been submitted.");
+                document.getElementById('feedbackInput').value = ""; 
+            }
+        };
+    </script>
+
+</body>
+</html>

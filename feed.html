@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession Feed - Anonymous Confessions</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+   
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Anonymous Confessions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="confess.html">Submit Confession</a></li>
+                    <li><a href="feed.html">Confession Feed</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">User Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="confession-feed">
+        <div class="container">
+            <h1>Confession Feed</h1>
+
+       
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search confessions..." onkeyup="searchConfessions()">
+            </div>
+
+            
+            <div class="filter-options">
+                <label for="sort">Sort by:</label>
+                <select id="sort" onchange="sortConfessions()">
+                    <option value="date">Date</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="category">Category</option>
+                </select>
+            </div>
+
+            <div class="confession-list" id="confessionList">
+                <div class="confession-item" data-id="1" data-category="love">
+                    <p><strong>Anonymous:</strong> I fell in love with my best friend, but I’m too scared to tell them.</p>
+                    <a href="details.html?id=1" class="view-more">View More</a>
+                    <p class="likes-count">Likes: <span>0</span></p>
+                    <button class="like-btn" onclick="likeConfession(1)">👍 Like</button>
+                </div>
+                <div class="confession-item" data-id="2" data-category="life">
+                    <p><strong>Anonymous:</strong> Sometimes, I feel like I’m not doing enough with my life.</p>
+                    <a href="details.html?id=2" class="view-more">View More</a>
+                    <p class="likes-count">Likes: <span>0</span></p>
+                    <button class="like-btn" onclick="likeConfession(2)">👍 Like</button>
+                </div>
+                <div class="confession-item" data-id="3" data-category="work">
+                    <p><strong>Anonymous:</strong> I hate my job, but I can’t afford to quit.</p>
+                    <a href="details.html?id=3" class="view-more">View More</a>
+                    <p class="likes-count">Likes: <span>0</span></p>
+                    <button class="like-btn" onclick="likeConfession(3)">👍 Like</button>
+                </div>
+                <div class="confession-item" data-id="4" data-category="family">
+                    <p><strong>Anonymous:</strong> I wish my parents understood me better.</p>
+                    <a href="details.html?id=4" class="view-more">View More</a>
+                    <p class="likes-count">Likes: <span>0</span></p>
+                    <button class="like-btn" onclick="likeConfession(4)">👍 Like</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       
+        function searchConfessions() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const confessionItems = document.querySelectorAll('.confession-item');
+
+            confessionItems.forEach(item => {
+                const confessionText = item.innerText.toLowerCase();
+                item.style.display = confessionText.includes(input) ? "" : "none";
+            });
+        }
+
+        function sortConfessions() {
+            const sortBy = document.getElementById('sort').value;
+           
+            alert(`Sorting by ${sortBy} (this feature needs implementation).`);
+        }
+
+      
+        function likeConfession(id) {
+            const confessionItem = document.querySelector(`.confession-item[data-id="${id}"]`);
+            const likesCount = confessionItem.querySelector('.likes-count span');
+            likesCount.textContent = parseInt(likesCount.textContent) + 1;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding:2px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+   
+}
+
+html, body {
+    height: 100%; /* Ensures the body covers the entire screen */
+}
+
+body {
+ 
+    color: #333;
+    line-height: 1.6;
+    background-image: url('home.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures the background covers the full height of the viewport */
+    overflow: hidden; /* Prevents overflow scroll */
+}
+
+.navbar {
+    background-color:royalblue;
+    overflow: hidden;
+    padding:3px;
+}
+.navbar .logo {
+    float: left;
+    color: white;
+    font-size: 24px;
+    padding: 14px;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    display: inline;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size:25px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+/* Feedback Section */
+.feedback-section {
+    padding: 50px 0;
+    font-size:23px;
+     /* Adding transparency for better readability */
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size:23px;
+    background-color: #f9fafc;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h1 {
+    font-size: 28px;
+    color: #4c5c68;
+    margin-bottom: 20px;
+}
+
+.report-content, .feedback-content {
+    margin: 23px 0;
+}
+
+.report-content h2, .feedback-content h2 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 10px;
+}
+ p {
+          
+       
+
+           background-color: #ddd;
+            font-size:20px;
+            font-weight:400 ;
+        }
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size:23px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: none;
+    font-size:23px;
+}
+
+textarea:focus {
+    border-color: #4c5c68;
+    outline: none;
+    font-size: 23px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size:23px;
+    color: #fff;
+    background-color: #4c5c68;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    font-weight: bold;
+    font-size:23px;
+    background-color: #343a40;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    body {
+        background-image: url('gold-heart-shaped-lights.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+       
+        .container {
+    
+            padding-left: 40px; /* Left padding for the entire content */
+            max-width: 600px; /* Optional max-width for the content */
+            margin: 23px 0; /* Optional margin to add some spacing */
+        }
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

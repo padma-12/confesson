@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Confession - Anonymous Confessions</title>
+    
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body >
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Anonymous Confessions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="confess.html">Submit Confession</a></li>
+                    <li><a href="feed.html">Confession Feed</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">User Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Confession Submission Form -->
+    <section class="confession-form">
+        <div class="container">
+            <h1>Submit Your Confession</h1>
+            <form action="submit_confession.php" method="post">
+                <textarea name="confession" placeholder="Write your confession here..." rows="10" required></textarea><br>
+                <input type="text" name="tags" placeholder="Optional: Add tags (comma-separated)" maxlength="100"><br>
+                <button type="submit" class="btn confess-btn">Submit Confession</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
